@@ -1,27 +1,46 @@
 pipeline {
 	agent any
 	tools {
-		nodejs "npm"
+		nodejs 'NodeJS'
 	}
+
 	stages {
-		stage('Git Checkout'){
+		stage('Checkout Github'){
 			steps {
-				checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/iQuantC/Docker_NodeJS_Todo_App.git']])
+				git branch: 'main', credentialsId: 'Git-tk', url: 'https://github.com/max-az-10/NodeApp.git'
 			}
-		}
-		
-		stage('Install Dependencies') {
+		}		
+
+		stage('Install node dependencies'){
 			steps {
 				sh 'npm install'
 			}
 		}
-		
-//		stage('Run Tests') {
-//			steps {
-//				sh 'npm test'
-//			}
-//		}
 
+		stage('Test Code'){
+			steps {
+				sh 'npm test'
+			}
+		}
+
+                 stage('Build Docker Image'){
+                        steps {
+                                script {
+                                        docker.build("nodeimage"+"build_number")
+                                }
+                        }
+                }
+
+        }
+
+	post {
+		success {
+			echo 'Build&Deploy completed succesfully!'
+		}
+
+		failure {
+			echo 'Build&Deploy failed. Check logs.'
+		}
 	}
 
 }

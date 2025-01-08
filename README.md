@@ -1,32 +1,23 @@
-PART 01: https://youtu.be/NNWwHS22JlY
-PART 02: https://youtu.be/M8VGUyA3SN8
-PART 03: https://youtu.be/mlMxC3PsnG8
+#Project: Deploying Node.js with MySQL Backend using Docker Compose
 
-In this video, I preview Resume Project 01 about how to containerize and deploy a NodeJS App with a Backend MySQL DB using Docker Compose. 
+The goal of the project is to deploy a Node.js application that interacts with a MySQL database using Docker. You will create Docker images for both the Node.js app and the MySQL database, and use Docker Compose to orchestrate the containers.
 
-Please watch all THREE (3) parts of the this project. 
+We will perform the foolowing in this project:
 
-What You'll Learn:
+#Step 1: Containerize Node.js App using a Dockerfile (Multi-staged & Cache Layered)
+Objective: Create a Dockerfile to containerize a Node.js application. The application will be packaged with all its dependencies, and a production-ready image will be built.
 
-PART 01: How to Containerize a NodeJS App using a Dockerfile (Multi-staged & Cache Layered) - https://youtu.be/NNWwHS22JlY
+#Step 2: Persist Node.js App Data with MySQL DB Backend
+Objective: Set up a MySQL database as a backend service and ensure that the data persisted across container restarts.
 
-PART 02: How to attach a volume (MySQL Database) to the NodeJS App to  persist data - https://youtu.be/M8VGUyA3SN8
+#Step 3: Deploy Node.js App with Backend MySQL DB using Docker Compose
+Objective: Use Docker Compose to link the Node.js app and MySQL database, making it easy to manage the containers together.
 
-PART 03: Deploy the multi-container architecture using Docker compose - https://youtu.be/mlMxC3PsnG8
 
-
-Whether you're new to DevOos or looking to enhance your IT skills, this tutorial is perfect for you. By the end of the video, you'll have a fully functional NodeJS App with a Backend Database that you can use as a foundation for deploying your applications in real world.
-
-Don't forget to like, comment, and subscribe for more projects and tutorials! If you have any questions or need further clarification, drop a comment below.
 
 #docker #dockercompose #compose #nodejs #containers #CloudComputing #DevOps #mysql  
 
-Disclaimer: Video is made for educational purposes
 
-Follow Us:
+GitHub:
 
-GitHub: https://github.com/iQuantC
-
-Instagram: https://www.instagram.com/iquantconsult/
-
-Happy coding! 🎉
+Congratulation!!! 🎉
