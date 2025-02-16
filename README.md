@@ -15,6 +15,7 @@ Objective: Use Docker Compose to link the Node.js app and MySQL database, making
 
 ** Use this video from iQuantC as a guide to complete this project:
 https://youtu.be/fbD_tc-JG7E?si=Dk4SzfiQkzs8PNbk
+
 GitHub Repo: https://github.com/iQuantC/Docker_Nod...
 
 #docker #dockercompose #compose #nodejs #containers #CloudComputing #DevOps #mysql  
